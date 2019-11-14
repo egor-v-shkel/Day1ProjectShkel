@@ -1,7 +1,7 @@
 package by.javatr.task1.run;
 
 import by.javatr.scanner.DataScanner;
-import by.javatr.task1.util.Logic;
+import by.javatr.task1.logic.Logic;
 
 public class Runner {
 

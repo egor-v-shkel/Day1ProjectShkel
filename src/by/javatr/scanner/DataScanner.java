@@ -9,7 +9,7 @@ public class DataScanner {
 
 		Scanner sc = new Scanner(System.in);
 
-		while(!sc.hasNextDouble()) {
+		while(!sc.hasNextInt()) {
 			sc.next();
 		}
 
@@ -27,4 +27,6 @@ public class DataScanner {
 
 		return sc.nextDouble();
 	}
+
+
 }
