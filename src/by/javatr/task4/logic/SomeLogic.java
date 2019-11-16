@@ -1,9 +1,10 @@
 package by.javatr.task4.logic;
 
-public class CircleInscribedLogic {
+public class SomeLogic {
 
     public static int calculate(int squareArea){
 
-        return squareArea/2;
+        return squareArea>>1;
+        //return squareArea/2;
     }
 }

@@ -1,19 +1,20 @@
 package by.javatr.task4.run;
 
 import by.javatr.scanner.DataScanner;
-import by.javatr.task4.logic.CircleInscribedLogic;
+import by.javatr.task4.logic.SomeLogic;
+
+import java.util.Arrays;
 
 public class Runner {
 
     public static void main(String[] args) {
 
-        int outerSquareArea;
-        System.out.println("Введите 4 числа через пробел");
-        outerSquareArea = DataScanner.enterIntegerFromConsole();
+        int[] input;
+        int digitsNum = 4;
+        System.out.printf("Введите последовательно %d целых числа через пробел.\n", digitsNum);
+        //input = DataScanner.enterIntArrayFromConsole();
 
-        int innerSquareArea;
-        innerSquareArea = CircleInscribedLogic.calculate(outerSquareArea);
-        System.out.println("Площадь квадрата, вписанного в окружность: " + innerSquareArea);
-        System.out.println("Площадь вписанного квадрата меньше площади заданного в 2 раза.");
+        //System.out.println(Arrays.toString(input));
+        System.out.println(SomeLogic.calculate(5));
     }
 }
