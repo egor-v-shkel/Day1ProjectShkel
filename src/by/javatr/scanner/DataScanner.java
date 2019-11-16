@@ -47,5 +47,13 @@ public class DataScanner {
         return intArray;
     }
 
+    @SuppressWarnings("resource")
+    public static String enterLineFromConsole() {
+
+        Scanner sc = new Scanner(System.in);
+
+        return sc.nextLine();
+    }
+
 
 }
