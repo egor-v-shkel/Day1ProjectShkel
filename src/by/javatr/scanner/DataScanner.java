@@ -32,19 +32,28 @@ public class DataScanner {
     public static int[] enterIntArrayFromConsole() throws NumberFormatException {
 
         Scanner sc = new Scanner(System.in);
-        String[] strArray = sc.nextLine().split(" ");
-        int strArrayLength = strArray.length;
-        int[] intArray = new int[strArrayLength];
-        for (int i = 0; i < strArrayLength; i++) {
-            if (sc.hasNextInt()) {
-                intArray[i] = sc.nextInt();
-            } else {
-                System.out.println("You didn't provide enough numbers");
-                break;
-            }
-            intArray[i] = Integer.parseInt(strArray[i]);
+        String inputStr = sc.nextLine();
+
+        boolean inputCorrect = checkInputCorrectness(inputStr);
+
+        if (!inputCorrect) return null;
+        return parseInputToArray(inputStr);
+    }
+
+    private static int[] parseInputToArray(String input) {
+
+        String[] strArray = input.split(" ");
+        int size = strArray.length;
+        int[] arr = new int[size];
+        for (int i = 0; i < size; i++) {
+            arr[i] = Integer.parseInt(strArray[i]);
         }
-        return intArray;
+        return arr;
+    }
+
+    private static boolean checkInputCorrectness(String input) {
+
+        return input.matches("^(-?[0-9 ])+$");//TODO correct negative numbers match
     }
 
     @SuppressWarnings("resource")

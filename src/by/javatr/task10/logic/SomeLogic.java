@@ -1,4 +1,4 @@
-package by.javatr.task4.logic;
+package by.javatr.task10.logic;
 
 public class SomeLogic {
 

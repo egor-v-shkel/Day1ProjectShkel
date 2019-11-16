@@ -1,4 +1,4 @@
-package by.javatr.task4.run;
+package by.javatr.task10.run;
 
 import by.javatr.scanner.DataScanner;
 import by.javatr.task4.logic.EvenLogic;

@@ -10,7 +10,7 @@ public class Runner {
         int year, month;
         System.out.println("Введите желаемый год: ");
         year = DataScanner.enterIntegerFromConsole();
-        System.out.println("Введите желаемый месяц: ");
+        System.out.println("Введите номер желаемого месяца: ");
         month = DataScanner.enterIntegerFromConsole();
 
         DaysInMonthLogic.checkInput(month);
