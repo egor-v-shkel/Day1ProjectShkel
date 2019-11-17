@@ -1,22 +1,23 @@
 package by.javatr.task10.run;
 
 import by.javatr.scanner.DataScanner;
-import by.javatr.task4.logic.EvenLogic;
+import by.javatr.task10.logic.TableLogic;
 
 public class Runner {
 
     public static void main(String[] args) {
 
-        String input;
-        int digitsNum = 4;
-        System.out.printf("Введите последовательно %d целых числа через пробел.\n", digitsNum);
-        input = DataScanner.enterLineFromConsole();
+        double a, b, h;
+        System.out.println("Введите значения начала отрезка: ");
+        a = DataScanner.enterDoubleFromConsole();
+        System.out.println("Введите значения конца отрезка: ");
+        b = DataScanner.enterDoubleFromConsole();
+        System.out.println("Введите шаг вычисления значений h: ");
+        h = DataScanner.enterDoubleFromConsole();
 
-        boolean inputIsCorrect = EvenLogic.checkInputCorrectness(input);
+        double[][] output = TableLogic.calculate(a, b, h);
 
-        if (inputIsCorrect) {
-            int[] ints = EvenLogic.parseInputToArray(input);
-            System.out.println(EvenLogic.containEvenNumbers(ints));
-        } else System.out.println("Проверьте правильность ввода.");
+        String result = TableLogic.createTable(output);
+        System.out.println(result);
     }
 }
