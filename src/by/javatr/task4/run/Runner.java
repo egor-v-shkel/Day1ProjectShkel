@@ -16,7 +16,7 @@ public class Runner {
         try {
              arrayFromConsole = DataScanner.enterIntArrayFromConsole();
         } catch (InputMismatchException e) {
-            System.out.println("Проверьте правильность ввода.");
+            System.out.println(e.getMessage());
         }
 
         boolean correctSize = EvenLogic.checkArraySize(arrayFromConsole, ARRAY_SIZE);

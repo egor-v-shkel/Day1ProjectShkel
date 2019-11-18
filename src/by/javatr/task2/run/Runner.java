@@ -20,7 +20,7 @@ public class Runner {
             daysNum = DaysInMonthLogic.daysCalculate(year, month);
             System.out.println("Количество дней в этом месяце: " + daysNum);
         } catch (DateTimeException e) {
-            System.out.println("Проверьте правильность ввода.");
+            System.out.println("Проверьте правильность ввода даты.");
         }
 
     }

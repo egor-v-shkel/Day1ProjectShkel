@@ -51,7 +51,7 @@ public class DataScanner {
         String inputStr = sc.nextLine();
 
         boolean inputCorrect = checkInputArrayCorrectness(inputStr);
-        if (!inputCorrect) throw new InputMismatchException();
+        if (!inputCorrect) throw new InputMismatchException("Проверьте правильность ввода.");
 
         return parseInputToArray(inputStr);
     }

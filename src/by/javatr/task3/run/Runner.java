@@ -17,7 +17,7 @@ public class Runner {
             System.out.println("Площадь квадрата, вписанного в окружность: " + innerSquareArea);
             System.out.println("Площадь вписанного квадрата меньше площади заданного в 2 раза.");
         } catch (IllegalArgumentException e) {
-            System.out.println("Проверьте правильность ввода.");
+            System.out.println(e.getMessage());
         }
     }
 }
