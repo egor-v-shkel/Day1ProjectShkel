@@ -24,6 +24,6 @@ public class Runner {
             boolean contains = EvenLogic.containEvenNumbers(arrayFromConsole);
             System.out.println(contains);
         } else
-            System.out.println("Проверьте количество введенных чисел.");
+            System.out.println("Проверьте количество введенных данных.");
     }
 }
