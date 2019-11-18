@@ -3,6 +3,8 @@ package by.javatr.task2.run;
 import by.javatr.scanner.DataScanner;
 import by.javatr.task2.logic.DaysInMonthLogic;
 
+import java.time.DateTimeException;
+
 public class Runner {
 
     public static void main(String[] args) {
@@ -13,10 +15,13 @@ public class Runner {
         System.out.println("Введите номер желаемого месяца: ");
         month = DataScanner.enterIntegerFromConsole();
 
-        DaysInMonthLogic.checkInput(month);
-
         int daysNum;
-        daysNum = DaysInMonthLogic.daysCalculate(year, month);
-        System.out.println("Количество дней в этом месяце: "+daysNum);
+        try {
+            daysNum = DaysInMonthLogic.daysCalculate(year, month);
+            System.out.println("Количество дней в этом месяце: " + daysNum);
+        } catch (DateTimeException e) {
+            System.out.println("Проверьте правильность ввода.");
+        }
+
     }
 }

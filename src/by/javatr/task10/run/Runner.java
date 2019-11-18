@@ -6,7 +6,6 @@ import by.javatr.task10.logic.TableLogic;
 public class Runner {
 
     public static void main(String[] args) {
-
         double a, b, h;
         System.out.println("Введите значения начала отрезка: ");
         a = DataScanner.enterDoubleFromConsole();

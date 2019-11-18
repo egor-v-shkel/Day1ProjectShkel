@@ -1,10 +1,10 @@
 package by.javatr.scanner;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class DataScanner {
 
-    @SuppressWarnings("resource")
     public static int enterIntegerFromConsole() {
 
         Scanner sc = new Scanner(System.in);
@@ -16,7 +16,15 @@ public class DataScanner {
         return sc.nextInt();
     }
 
-    @SuppressWarnings("resource")
+    public static int enterNotNegativeIntegerFromConsole() {
+        int temp;
+        do {
+            temp = enterIntegerFromConsole();
+        } while (temp < 0);
+
+        return temp;
+    }
+
     public static double enterDoubleFromConsole() {
 
         Scanner sc = new Scanner(System.in);
@@ -28,16 +36,29 @@ public class DataScanner {
         return sc.nextDouble();
     }
 
-    @SuppressWarnings("resource")
-    public static int[] enterIntArrayFromConsole() throws NumberFormatException {
+    public static double enterNotNegativeDoubleFromConsole() {
+        double temp;
+        do {
+            temp = enterDoubleFromConsole();
+        } while (temp < 0);
+
+        return temp;
+    }
+
+    public static int[] enterIntArrayFromConsole() throws InputMismatchException {
 
         Scanner sc = new Scanner(System.in);
         String inputStr = sc.nextLine();
 
-        boolean inputCorrect = checkInputCorrectness(inputStr);
+        boolean inputCorrect = checkInputArrayCorrectness(inputStr);
+        if (!inputCorrect) throw new InputMismatchException();
 
-        if (!inputCorrect) return null;
         return parseInputToArray(inputStr);
+    }
+
+    private static boolean checkInputArrayCorrectness(String input) {
+
+        return input.matches("[-?\\d]+(?: -?\\d+)*");
     }
 
     private static int[] parseInputToArray(String input) {
@@ -51,12 +72,6 @@ public class DataScanner {
         return arr;
     }
 
-    private static boolean checkInputCorrectness(String input) {
-
-        return input.matches("^(-?[0-9 ])+$");//TODO correct negative numbers match
-    }
-
-    @SuppressWarnings("resource")
     public static String enterLineFromConsole() {
 
         Scanner sc = new Scanner(System.in);
