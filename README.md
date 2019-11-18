@@ -1,3 +1,3 @@
 # Day1ProjectShkel
 
-## JDK version - 8
+## JDK version require - 8 or above.
