@@ -2,7 +2,7 @@ package by.javatr.task4.logic;
 
 public class EvenLogic {
 
-    public static boolean containEvenNumbers(int[] array){
+    public static boolean containEvenNumbers( int[] array) {
         int minQuantity = 2;
         int sum = 0;
         for (int i :

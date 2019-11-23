@@ -13,7 +13,7 @@ public class PerfectNumberLogic {
                 sum = sum + i;
             }
         }
-        return (sum == num);
+        return (sum == num && num != 0);
     }
 
     private static boolean naturalNumCheck(int num) {
