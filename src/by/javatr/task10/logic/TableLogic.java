@@ -4,7 +4,7 @@ public class TableLogic {
 
     public static double[][] calculate(double start, double end, double step) {
         double[][] result;
-        int iterNum = (int) ((end - start) / step) + 1;
+        int iterNum = (int) (Math.round((end - start) / step)) + 1;
         result = new double[2][iterNum];
 
         for (int i = 0; i < iterNum; i++) {
