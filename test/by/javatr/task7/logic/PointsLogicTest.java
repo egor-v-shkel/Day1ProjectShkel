@@ -1,10 +1,9 @@
 package by.javatr.task7.logic;
 
+import org.junit.Assert;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
-public class PointsLogicTest {
+public class PointsLogicTest extends Assert {
 
     @Test
     public void calculatePositiveDot() {

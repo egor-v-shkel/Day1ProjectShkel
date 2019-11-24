@@ -1,10 +1,9 @@
 package by.javatr.task8.logic;
 
+import org.junit.Assert;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
-public class FunctionLogicTest {
+public class FunctionLogicTest extends Assert {
 
     @Test
     public void calculateMore() {

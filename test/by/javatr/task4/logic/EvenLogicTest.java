@@ -1,10 +1,9 @@
 package by.javatr.task4.logic;
 
+import org.junit.Assert;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
-public class EvenLogicTest {
+public class EvenLogicTest extends Assert {
 
     @Test
     public void containEvenNumbersTrue() {

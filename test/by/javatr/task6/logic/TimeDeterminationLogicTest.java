@@ -1,10 +1,9 @@
 package by.javatr.task6.logic;
 
+import org.junit.Assert;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
-public class TimeDeterminationLogicTest {
+public class TimeDeterminationLogicTest extends Assert {
 
     @Test
     public void calculate() {

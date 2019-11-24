@@ -1,16 +1,23 @@
 package by.javatr.task10.logic;
 
+import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+public class TableLogicTest extends Assert {
 
-public class TableLogicTest {
+    private double[][] expected;
 
-    //TODO add correct test
+    @Before
+    public void setupExpectedArray() {
+        expected = new double[][]{{1.0, 1.1, 1.2, 1.3, 1.4, 1.5}, {1.557, 1.964, 2.572, 3.602, 5.798, 14.101}};
+    }
+
     @Test
     public void calculate() {
-        double[][] expected = { {1.0, 1.1, 1.2000000000000002, 1.3000000000000003} , { 1.55, 1.94, 2.57, 3.6} };
-
-        assertArrayEquals(expected, TableLogic.calculate(1.0, 1.4, 0.1));
+        double[][] actual = TableLogic.calculate(1.0, 1.5, 0.1);
+        for (int i = 0; i < actual.length; i++) {
+            assertArrayEquals(expected[i], actual[i], 1E-3);
+        }
     }
 }

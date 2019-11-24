@@ -1,12 +1,11 @@
 package by.javatr.task2.logic;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.Random;
 
-import static org.junit.Assert.*;
-
-public class DaysInMonthLogicTest {
+public class DaysInMonthLogicTest extends Assert {
     private static final Random rnd = new Random();
 
     @Test

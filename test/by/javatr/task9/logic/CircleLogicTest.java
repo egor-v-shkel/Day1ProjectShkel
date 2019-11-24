@@ -1,11 +1,9 @@
 package by.javatr.task9.logic;
 
-import by.javatr.task3.logic.CircleInscribedLogic;
+import org.junit.Assert;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
-public class CircleLogicTest {
+public class CircleLogicTest extends Assert {
 
     @Test
     public void circumference() {

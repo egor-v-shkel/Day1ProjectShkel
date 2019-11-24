@@ -4,28 +4,21 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class LastDigitLogicTest extends Assert {
-    private static List<Integer> expectedList;
+    private int[] expected;
 
     @Before
-    public void fillExpectedList() {
-        int[] data = new int[]{0, 1, 4, 9, 6, 5, 6, 9, 4, 1, 0, 1, 4, 9, 6, 5, 6, 9, 4, 1, 0};
-        expectedList = new ArrayList<>(data.length);
-        for (int i : data) {
-            expectedList.add(i);
-        }
+    public void setupExpectedArr() {
+        expected = new int[]{0, 1, 4, 9, 6, 5, 6, 9, 4, 1, 0, 1, 4, 9, 6, 5, 6, 9, 4, 1, 0};
     }
 
     @Test
     public void getLastDigitSqrtTest() {
-        List<Integer> resultList = new ArrayList<>(expectedList.size());
+        int[] actual = new int[21];
         for (int i = -10; i < 11; i++) {
-            int methodResult = LastDigitLogic.getLastDigitSqrt(i);
-            resultList.add(methodResult);
+            int result = LastDigitLogic.getLastDigitSqrt(i);
+            actual[i+10] = result;
         }
-        assertEquals(resultList, expectedList);
+        assertArrayEquals(expected, actual);
     }
 }

@@ -1,12 +1,11 @@
 package by.javatr.task5.logic;
 
+import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
-import static org.junit.Assert.*;
-
-public class PerfectNumberLogicTest {
+public class PerfectNumberLogicTest extends Assert {
 
     @Rule
     public ExpectedException exceptionRule = ExpectedException.none();
