@@ -16,7 +16,7 @@ public class Runner {
             System.out.println("Введите координаты точки B через пробел: ");
             inputB = DataScanner.enterIntArrayFromConsole();
 
-            String status = PointsLogic.calculate(inputA, inputB);
+            String status = PointsLogic.closestPoint(inputA, inputB);
             System.out.println(status);
         } catch (InputMismatchException e) {
             System.out.println(e.getMessage());

@@ -5,7 +5,7 @@ public class PerfectNumberLogic {
     public static boolean isPerfect(int num) throws IllegalArgumentException {
         boolean notNatural;
         notNatural = naturalNumCheck(num);
-        if (notNatural) throw new IllegalArgumentException("Введено ненатуральное число.");
+        if (notNatural) throw new IllegalArgumentException("Введено ненатуральное число: " + num);
 
         int sum = 0;
         for (int i = 1; i < num; i++) {
