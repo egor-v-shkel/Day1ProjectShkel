@@ -2,6 +2,8 @@ package by.javatr.task2.logic;
 
 public class DaysInMonthLogic {
 
+    private DaysInMonthLogic() {}
+
     public enum Month {
         JANUARY,
         FEBRUARY,

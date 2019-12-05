@@ -2,6 +2,8 @@ package by.javatr.task5.logic;
 
 public class PerfectNumberLogic {
 
+    private PerfectNumberLogic() {}
+
     public static boolean isPerfect(int num) throws IllegalArgumentException {
         boolean notNatural;
         notNatural = naturalNumCheck(num);

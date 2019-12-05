@@ -2,6 +2,8 @@ package by.javatr.task6.logic;
 
 public class TimeDeterminationLogic {
 
+    public TimeDeterminationLogic() {}
+
     public static int[] calculate(int second) {
 
         int hour = second/3600;

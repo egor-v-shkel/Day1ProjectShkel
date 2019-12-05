@@ -2,6 +2,8 @@ package by.javatr.task10.logic;
 
 public class TableLogic {
 
+    private TableLogic() {}
+
     public static double[][] calculate(double start, double end, double step) {
         double[][] result;
         int iterNum = (int) (Math.round((end - start) / step)) + 1;

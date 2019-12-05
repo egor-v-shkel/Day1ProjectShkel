@@ -5,6 +5,8 @@ import java.util.Scanner;
 
 public class DataScanner {
 
+    private DataScanner() {}
+
     public static int enterIntegerFromConsole() {
 
         Scanner sc = new Scanner(System.in);
@@ -55,6 +57,8 @@ public class DataScanner {
 
         return parseInputToArray(inputStr);
     }
+
+
 
     private static boolean checkInputArrayCorrectness(String input) {
 

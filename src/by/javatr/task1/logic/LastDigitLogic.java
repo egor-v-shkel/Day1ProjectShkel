@@ -2,6 +2,8 @@ package by.javatr.task1.logic;
 
 public class LastDigitLogic {
 
+    private LastDigitLogic() {}
+
     public static int getLastDigitSqrt(int num) {
 
         int lastDigit = Math.abs(num % 10);
