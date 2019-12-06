@@ -2,7 +2,7 @@ package by.javatr.task6.logic;
 
 public class TimeDeterminationLogic {
 
-    public TimeDeterminationLogic() {}
+    private TimeDeterminationLogic() {}
 
     public static int[] calculate(int second) {
 
