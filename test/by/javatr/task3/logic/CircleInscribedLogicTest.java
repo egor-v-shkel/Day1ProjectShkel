@@ -12,13 +12,13 @@ public class CircleInscribedLogicTest extends Assert {
 
     @Test
     public void calculate() {
-        assertEquals(CircleInscribedLogic.calculate(255.0), 127.5, 0.1);
+        assertEquals(CircleInscribedLogic.calculateInternalSquareArea(255.0), 127.5, 0.1);
     }
 
     @Test
     public void calculateExc() {
         exceptionRule.expect(IllegalArgumentException.class);
         exceptionRule.expectMessage("Проверьте правильность ввода");
-        CircleInscribedLogic.calculate(-4.0);
+        CircleInscribedLogic.calculateInternalSquareArea(-4.0);
     }
 }
