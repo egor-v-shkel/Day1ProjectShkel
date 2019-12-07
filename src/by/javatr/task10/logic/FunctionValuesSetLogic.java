@@ -1,8 +1,8 @@
 package by.javatr.task10.logic;
 
-public class TableLogic {
+public class FunctionValuesSetLogic {
 
-    private TableLogic() {}
+    private FunctionValuesSetLogic() {}
 
     public static double[][] calculate(double start, double end, double step) {
         double[][] result;

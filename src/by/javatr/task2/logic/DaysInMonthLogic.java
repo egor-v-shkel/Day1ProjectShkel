@@ -22,7 +22,7 @@ public class DaysInMonthLogic {
 
         public static Month of(int month) throws IllegalArgumentException{
             if (month < 1 || month > 12) {
-                throw new IllegalArgumentException("Invalid value for MonthOfYear: " + month);
+                throw new IllegalArgumentException("Неправильное значение для месяца: " + month);
             }
             return ENUMS[month - 1];
         }

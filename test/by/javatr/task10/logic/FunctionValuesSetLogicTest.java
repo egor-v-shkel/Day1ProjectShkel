@@ -4,7 +4,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class TableLogicTest extends Assert {
+public class FunctionValuesSetLogicTest extends Assert {
 
     private double[][] expected;
 
@@ -15,7 +15,7 @@ public class TableLogicTest extends Assert {
 
     @Test
     public void calculate() {
-        double[][] actual = TableLogic.calculate(1.0, 1.5, 0.1);
+        double[][] actual = FunctionValuesSetLogic.calculate(1.0, 1.5, 0.1);
         for (int i = 0; i < actual.length; i++) {
             assertArrayEquals(expected[i], actual[i], 1E-3);
         }

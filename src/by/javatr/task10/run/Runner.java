@@ -1,7 +1,7 @@
 package by.javatr.task10.run;
 
 import by.javatr.scanner.DataScanner;
-import by.javatr.task10.logic.TableLogic;
+import by.javatr.task10.logic.FunctionValuesSetLogic;
 
 public class Runner {
 
@@ -14,9 +14,9 @@ public class Runner {
         System.out.println("Введите шаг вычисления значений h: ");
         h = DataScanner.enterDoubleFromConsole();
 
-        double[][] output = TableLogic.calculate(a, b, h);
+        double[][] output = FunctionValuesSetLogic.calculate(a, b, h);
 
-        String result = TableLogic.createTable(output);
+        String result = FunctionValuesSetLogic.createTable(output);
         System.out.println(result);
     }
 }
